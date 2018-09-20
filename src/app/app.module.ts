@@ -4,7 +4,7 @@ import { Routes, RouterModule, UrlHandlingStrategy } from '@angular/router';
 
 import { UpgradeModule, downgradeComponent } from '@angular/upgrade/static';
 import { AppComponent } from './app.component';
-import { Ng2DemoComponent } from './ng2-demo.component';
+import { Ng6DemoComponent } from './home/ng6-demo.component';
 import { phoneServiceProvider } from './_services/phone.service';
 import { HomeComponent } from './home/home.component';
 
@@ -20,12 +20,6 @@ export class CustomHandlingStrategy implements UrlHandlingStrategy {
   merge(url, whole) { return url; }
 }
 
-// angular.module('phonecatApp')
-//   .directive(
-//     'home',
-//     downgradeComponent({component: HomeComponent})
-//   );
-
 const routes: Routes = [
   {
     path: '',
@@ -34,7 +28,7 @@ const routes: Routes = [
   },
   {
     path: 'route',
-    component: Ng2DemoComponent
+    component: Ng6DemoComponent
   },
   {
     path: 'home',
@@ -44,7 +38,7 @@ const routes: Routes = [
 @NgModule({
   declarations: [
     AppComponent,
-    Ng2DemoComponent,
+    Ng6DemoComponent,
     HomeComponent
   ],
   imports: [
@@ -57,8 +51,6 @@ const routes: Routes = [
     })
   ],
   entryComponents: [
-    HomeComponent,
-    Ng2DemoComponent // Don't forget this!!!
   ],
   providers: [
     phoneServiceProvider,

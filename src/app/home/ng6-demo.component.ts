@@ -1,5 +1,5 @@
 import { Component, OnInit, Inject } from '@angular/core';
-import { PHONE_SERVICE } from "./_services/phone.service";
+import { PHONE_SERVICE } from '../_services/phone.service';
 
 @Component({
   selector: 'app-ng6-demo',
@@ -11,7 +11,7 @@ import { PHONE_SERVICE } from "./_services/phone.service";
     </p>
   `
 })
-export class Ng2DemoComponent implements OnInit {
+export class Ng6DemoComponent implements OnInit {
 
   phones: any[] = [];
 
@@ -20,7 +20,7 @@ export class Ng2DemoComponent implements OnInit {
     }
 
     ngOnInit() {
-      console.log('ng2-demo');
+      console.log('ng6-demo page');
       this.phones = this.phoneService.query();
     }
 
