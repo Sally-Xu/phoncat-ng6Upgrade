@@ -17,19 +17,37 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/ng6Upgrade",
+            "outputPath": "dist",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
             "tsConfig": "src/tsconfig.app.json",
             "assets": [
               "src/favicon.ico",
-              "src/assets"
+              "src/assets",
+              "src/ng1"
             ],
             "styles": [
               "src/styles.scss"
             ],
-            "scripts": []
+            "scripts": [ 
+              "src/ng1/bower_components/jquery/dist/jquery.js",
+              "src/ng1/bower_components/angular/angular.js",
+              "src/ng1/bower_components/angular-animate/angular-animate.js",
+              "src/ng1/bower_components/angular-resource/angular-resource.js",
+              "src/ng1/bower_components/angular-route/angular-route.js",
+              "src/ng1/app.module.js",
+              "src/ng1/app.config.js",
+              "src/ng1/app.animations.js",
+              "src/ng1/core/core.module.js",
+              "src/ng1/core/checkmark/checkmark.filter.js",
+              "src/ng1/core/phone/phone.module.js",
+              "src/ng1/core/phone/phone.service.js",
+              "src/ng1/phone-list/phone-list.module.js",
+              "src/ng1/phone-list/phone-list.component.js",
+              "src/ng1/phone-detail/phone-detail.module.js",
+              "src/ng1/phone-detail/phone-detail.component.js"
+            ]
           },
           "configurations": {
             "production": {
