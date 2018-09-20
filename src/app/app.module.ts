@@ -12,7 +12,7 @@ declare var angular: any;
 
 export class CustomHandlingStrategy implements UrlHandlingStrategy {
   shouldProcessUrl(url) {
-    const should = url.toString().startsWith('/ng6') || url.toString() === '/';
+    const should = !url.toString().startsWith('/#/') || url.toString() === '/';
     console.log('shouldProcessUrl: ', url.toString(), should);
     return should;
   }
@@ -20,24 +20,24 @@ export class CustomHandlingStrategy implements UrlHandlingStrategy {
   merge(url, whole) { return url; }
 }
 
-angular.module('phonecatApp')
-  .directive(
-    'ng2Demo',
-    downgradeComponent({component: Ng2DemoComponent})
-  );
+// angular.module('phonecatApp')
+//   .directive(
+//     'home',
+//     downgradeComponent({component: HomeComponent})
+//   );
 
 const routes: Routes = [
   {
     path: '',
     pathMatch: 'full',
-    redirectTo: 'ng6/home'
+    redirectTo: 'home'
   },
   {
-    path: 'ng6/route',
+    path: 'route',
     component: Ng2DemoComponent
   },
   {
-    path: 'ng6/home',
+    path: 'home',
     component: HomeComponent
   }
 ];
