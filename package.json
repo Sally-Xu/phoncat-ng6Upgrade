@@ -7,8 +7,7 @@
     "build": "ng build",
     "test": "ng test",
     "lint": "ng lint",
-    "e2e": "ng e2e",
-    "postinstall": "bower install"
+    "e2e": "ng e2e"
   },
   "private": true,
   "dependencies": {
@@ -24,7 +23,14 @@
     "@angular/upgrade": "^6.1.8",
     "core-js": "^2.5.7",
     "rxjs": "^6.3.2",
-    "zone.js": "~0.8.26"
+    "zone.js": "~0.8.26",
+    "angular": "1.5.x",
+    "angular-animate": "1.5.x",
+    "angular-mocks": "1.5.x",
+    "angular-resource": "1.5.x",
+    "angular-route": "1.5.x",
+    "bootstrap": "3.3.x",
+    "jquery": "2.2.x"
   },
   "devDependencies": {
     "@angular-devkit/build-angular": "~0.8.3",

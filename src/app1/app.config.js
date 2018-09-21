@@ -4,6 +4,7 @@ angular.
   module('phonecatApp').
   config(['$locationProvider' ,'$routeProvider',
     function config($locationProvider, $routeProvider) {
+      console.log('app config');
       // $locationProvider.hashPrefix('!');
       $routeProvider.
         when('/phones', {
