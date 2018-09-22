@@ -1,6 +1,6 @@
 'use strict';
 
-angular.
+export default angular.
   module('core.phone').
   factory('Phone', ['$resource',
     function($resource) {

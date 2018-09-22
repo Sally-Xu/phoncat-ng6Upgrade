@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { UpgradeModule } from '@angular/upgrade/static';
-
+import '../app1/app.module.js';
+import '../app1/app.config.js';
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',

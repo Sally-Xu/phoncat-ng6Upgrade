@@ -29,6 +29,7 @@
     "angular-mocks": "1.5.x",
     "angular-resource": "1.5.x",
     "angular-route": "1.5.x",
+    "angular-ui-router": "1.0.20",
     "bootstrap": "3.3.x",
     "jquery": "2.2.x"
   },
@@ -51,7 +52,6 @@
     "protractor": "~5.4.1",
     "ts-node": "~7.0.1",
     "tslint": "~5.11.0",
-    "typescript": "~2.7.2",
-    "bower": "^1.8.4"
+    "typescript": "~2.7.2"
   }
 }

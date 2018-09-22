@@ -8,9 +8,6 @@ import { Ng6DemoComponent } from './home/ng6-demo.component';
 import { phoneServiceProvider } from './_services/phone.service';
 import { HomeComponent } from './home/home.component';
 
-
-declare var angular: any;
-
 export class CustomHandlingStrategy implements UrlHandlingStrategy {
   shouldProcessUrl(url) {
     const should = !url.toString().startsWith('/#/') || url.toString() === '/';

@@ -1,7 +1,7 @@
 'use strict';
 
 // Register `phoneDetail` component, along with its associated controller and template
-angular.
+export default angular.
   module('phoneDetail').
   component('phoneDetail', {
     templateUrl: 'app1/phone-detail/phone-detail.template.html',

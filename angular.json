@@ -31,22 +31,6 @@
               "src/styles.scss"
             ],
             "scripts": [ 
-              "src/app1/bower_components/jquery/dist/jquery.js",
-              "src/app1/bower_components/angular/angular.js",
-              "src/app1/bower_components/angular-animate/angular-animate.js",
-              "src/app1/bower_components/angular-resource/angular-resource.js",
-              "src/app1/bower_components/angular-route/angular-route.js",
-              "src/app1/app.module.js",
-              "src/app1/app.config.js",
-              "src/app1/app.animations.js",
-              "src/app1/core/core.module.js",
-              "src/app1/core/checkmark/checkmark.filter.js",
-              "src/app1/core/phone/phone.module.js",
-              "src/app1/core/phone/phone.service.js",
-              "src/app1/phone-list/phone-list.module.js",
-              "src/app1/phone-list/phone-list.component.js",
-              "src/app1/phone-detail/phone-detail.module.js",
-              "src/app1/phone-detail/phone-detail.component.js"
             ]
           },
           "configurations": {

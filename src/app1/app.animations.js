@@ -1,6 +1,6 @@
 'use strict';
 
-angular.
+export default angular.
   module('phonecatApp').
   animation('.phone', function phoneAnimationFactory() {
     return {

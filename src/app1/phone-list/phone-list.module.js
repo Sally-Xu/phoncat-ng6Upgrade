@@ -1,4 +1,6 @@
 'use strict';
 
+import '../core/phone/phone.module';
+
 // Define the `phoneList` module
-angular.module('phoneList', ['core.phone']);
+export default angular.module('phoneList', ['core.phone']);

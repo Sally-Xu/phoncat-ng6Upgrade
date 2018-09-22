@@ -1,8 +1,23 @@
 'use strict';
+import angular from 'angular';
+import 'angular-ui-router';
+import 'angular-resource';
+import 'angular-route';
+import 'angular-animate';
+
+import './core/core.module';
+import './phone-list/phone-list.module';
+import './phone-detail/phone-detail.module';
+import './phone-list/phone-list.component';
+import './phone-detail/phone-detail.component';
+import './core/checkmark/checkmark.filter';
+
 // Define the `phonecatApp` module
-angular.module('phonecatApp', [
+export default angular.module('phonecatApp', [
   'ngAnimate',
   'ngRoute',
+  'ui.router',
+  'ngResource',
   'core',
   'phoneDetail',
   'phoneList'

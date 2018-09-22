@@ -1,4 +1,5 @@
 'use strict';
 
+
 // Define the `core.phone` module
-angular.module('core.phone', ['ngResource']);
+export default angular.module('core.phone', ['ngResource']);

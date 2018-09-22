@@ -1,6 +1,6 @@
 'use strict';
 
-angular.
+export default angular.
   module('core').
   filter('checkmark', function() {
     return function(input) {

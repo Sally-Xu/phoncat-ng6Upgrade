@@ -1,6 +1,6 @@
 'use strict';
 
-angular.
+export default angular.
   module('phonecatApp').
   config(['$locationProvider' ,'$routeProvider',
     function config($locationProvider, $routeProvider) {
