@@ -1,11 +1,12 @@
 <!--The content below is only a placeholder and can be replaced.-->
-<a href="route">ng6-route</a> |
-<a href="home">Home</a> | 
+<a routerLink="route">ng6-route</a> |
+<a routerLink="home">Home</a> | 
 <a href="#/phones">Phones</a> |
-<a href="#/home">Old Home</a>
+<a href="#/home1">Old Home</a>
 <!-- ng1 -->
 <div class="view-container">
-    <div ng-view class="view-frame"></div>
+    <!-- <div ng-view class="view-frame"></div> -->
+    <div ui-view></div>
     <router-outlet></router-outlet>
 </div>
 <!-- ng1 -->
