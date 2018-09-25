@@ -1,5 +1,5 @@
 import { Component, OnInit, Inject } from '@angular/core';
-import { PHONE_SERVICE } from '../_services/phone.service';
+import { PHONE_SERVICE } from '@app/_services/phone.service';
 
 @Component({
   selector: 'app-ng6-demo',

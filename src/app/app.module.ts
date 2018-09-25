@@ -1,12 +1,10 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule, UrlHandlingStrategy } from '@angular/router';
-
 import { UpgradeModule, downgradeComponent } from '@angular/upgrade/static';
-import { AppComponent } from './app.component';
-import { Ng6DemoComponent } from './home/ng6-demo.component';
+import { AppComponent } from '@app/phonecat/app.component';
+
 import { phoneServiceProvider } from './_services/phone.service';
-import { HomeComponent } from './home/home.component';
 
 export class CustomHandlingStrategy implements UrlHandlingStrategy {
   shouldProcessUrl(url) {
@@ -20,24 +18,18 @@ export class CustomHandlingStrategy implements UrlHandlingStrategy {
 
 const routes: Routes = [
   {
-    path: '',
-    pathMatch: 'full',
-    redirectTo: 'home'
-  },
-  {
-    path: 'route',
-    component: Ng6DemoComponent
-  },
-  {
     path: 'home',
-    component: HomeComponent
+    loadChildren: './home/home.module#HomeModule'
+  },
+  {
+    path: '',
+    redirectTo: '',
+    pathMatch: 'full'
   }
 ];
 @NgModule({
   declarations: [
     AppComponent,
-    Ng6DemoComponent,
-    HomeComponent
   ],
   imports: [
     BrowserModule,

@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { UpgradeModule } from '@angular/upgrade/static';
-import '@phonecat/app.module.js';
-import '@phonecat/app.config.js';
+import '@routerapp/app.module.js';
 
 @Component({
   selector: 'app-root',
@@ -9,10 +8,10 @@ import '@phonecat/app.config.js';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent implements OnInit {
-  title = 'ng6Upgrade';
+  title = 'ng6-routerapp';
   constructor(private upgrade: UpgradeModule) { }
 
   ngOnInit() {
-      this.upgrade.bootstrap(document.body, ['phonecatApp']);
+      this.upgrade.bootstrap(document.body, ['routerApp']);
   }
 }

@@ -12,6 +12,7 @@
     "target": "es5",
     "paths": {
       "@phonecat/*": ["src/phonecat/*"],
+      "@routerapp/*": ["src/routerapp/*"],
       "@app/*": ["src/app/*"],
       "@core/*": ["src/app/core/*"],
       "@environments/*": ["src/environments/*"],
