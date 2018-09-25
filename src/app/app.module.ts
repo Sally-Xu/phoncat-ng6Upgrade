@@ -10,7 +10,7 @@ import { HomeComponent } from './home/home.component';
 
 export class CustomHandlingStrategy implements UrlHandlingStrategy {
   shouldProcessUrl(url) {
-    const should = !url.toString().startsWith('/#/') || url.toString() === '/';
+    const should = !url.toString().startsWith('/#/');
     console.log('shouldProcessUrl: ', url.toString(), should);
     return should;
   }
@@ -42,11 +42,7 @@ const routes: Routes = [
   imports: [
     BrowserModule,
     UpgradeModule,
-    RouterModule.forRoot(routes,
-    {
-      useHash: false,
-      enableTracing: false
-    })
+    RouterModule.forRoot(routes)
   ],
   entryComponents: [
   ],

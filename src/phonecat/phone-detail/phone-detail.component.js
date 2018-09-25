@@ -4,7 +4,7 @@
 export default angular.
   module('phoneDetail').
   component('phoneDetail', {
-    templateUrl: 'app1/phone-detail/phone-detail.template.html',
+    templateUrl: 'phonecat/phone-detail/phone-detail.template.html',
     controller: ['$routeParams', 'Phone',
       function PhoneDetailController($routeParams, Phone) {
         var self = this;

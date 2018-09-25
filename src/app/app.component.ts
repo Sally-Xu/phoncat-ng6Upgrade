@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { UpgradeModule } from '@angular/upgrade/static';
-// import '../app1/app.module.js';
-// import '../app1/app.config.js';
-import '../app1/app.js';
+import '@phonecat/app.module.js';
+import '@phonecat/app.config.js';
+
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
@@ -13,6 +13,6 @@ export class AppComponent implements OnInit {
   constructor(private upgrade: UpgradeModule) { }
 
   ngOnInit() {
-      this.upgrade.bootstrap(document.body, ['routerApp']);
+      this.upgrade.bootstrap(document.body, ['phonecatApp']);
   }
 }

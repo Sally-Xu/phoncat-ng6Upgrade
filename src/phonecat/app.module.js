@@ -1,6 +1,5 @@
 'use strict';
 import angular from 'angular';
-import 'angular-ui-router';
 import 'angular-resource';
 import 'angular-route';
 import 'angular-animate';
@@ -16,7 +15,6 @@ import './core/checkmark/checkmark.filter';
 export default angular.module('phonecatApp', [
   'ngAnimate',
   'ngRoute',
-  'ui.router',
   'ngResource',
   'core',
   'phoneDetail',

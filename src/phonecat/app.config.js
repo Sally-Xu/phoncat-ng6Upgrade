@@ -5,7 +5,7 @@ export default angular.
   config(['$locationProvider' ,'$routeProvider',
     function config($locationProvider, $routeProvider) {
       console.log('app config');
-      // $locationProvider.hashPrefix('!');
+      $locationProvider.hashPrefix('');
       $routeProvider.
         when('/phones', {
           template: '<phone-list></phone-list>'
@@ -13,6 +13,6 @@ export default angular.
         when('/phones/:phoneId', {
           template: '<phone-detail></phone-detail>'
         })
-        .otherwise({template : ''});
+        // .otherwise({template : ''});
     }
   ]);

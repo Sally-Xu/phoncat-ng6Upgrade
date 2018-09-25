@@ -1,5 +1,5 @@
 import { InjectionToken } from '@angular/core';
-import '../../app1/core/phone/phone.service.js';
+import '@phonecat/core/phone/phone.service.js';
 
 export const PHONE_SERVICE = new InjectionToken<any>('PHONE_SERVICE');
 

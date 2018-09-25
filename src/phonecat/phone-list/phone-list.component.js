@@ -4,7 +4,7 @@
 export default angular.
   module('phoneList').
   component('phoneList', {
-    templateUrl: 'app1/phone-list/phone-list.template.html',
+    templateUrl: 'phonecat/phone-list/phone-list.template.html',
     controller: ['Phone',
       function PhoneListController(Phone) {
         this.phones = Phone.query();
