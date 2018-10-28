@@ -3,7 +3,7 @@ import { NgModule } from '@angular/core';
 import { Routes, RouterModule, UrlHandlingStrategy } from '@angular/router';
 import { UpgradeModule, downgradeComponent } from '@angular/upgrade/static';
 import { AppComponent } from '@app/phonecat/app.component';
-
+import { HomeModule } from '@app/home/home.module';
 import { phoneServiceProvider } from './_services/phone.service';
 
 export class CustomHandlingStrategy implements UrlHandlingStrategy {
@@ -34,6 +34,7 @@ const routes: Routes = [
   imports: [
     BrowserModule,
     UpgradeModule,
+    HomeModule,
     RouterModule.forRoot(routes)
   ],
   entryComponents: [
