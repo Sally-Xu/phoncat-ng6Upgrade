@@ -4,8 +4,7 @@ export default angular.
   module('phonecatApp').
   config(['$locationProvider' ,'$routeProvider',
     function config($locationProvider, $routeProvider) {
-      console.log('app config');
-      $locationProvider.hashPrefix('');
+      $locationProvider.html5Mode(true);
       $routeProvider.
         when('/phones', {
           template: '<phone-list></phone-list>'

@@ -7,6 +7,6 @@ import { Component, OnInit, Inject } from '@angular/core';
 })
 export class HomeComponent implements OnInit {
     ngOnInit() {
-      console.log('ng6-home');
+      console.log('ng6-home-start');
     }
 }

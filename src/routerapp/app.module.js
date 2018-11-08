@@ -5,12 +5,15 @@ import 'angular-ui-router';
 
 var routerApp = angular.module('routerApp', ['ui.router']);
 
-routerApp.config(function($stateProvider, $urlRouterProvider) {
-
-    $urlRouterProvider.otherwise('/home');
+routerApp.config(function($stateProvider, $urlRouterProvider, $locationProvider) {
+    $locationProvider.html5Mode(true);
     const base = 'routerapp';
     $stateProvider
-
+        .state('ng6', {
+            url: '/ui/{path:.*}',
+            // used to clear out ui-view when angular router is activated
+            template: ''
+        })
         // HOME STATES AND NESTED VIEWS ========================================
         .state('home', {
             url: '/home',
@@ -48,6 +51,8 @@ routerApp.config(function($stateProvider, $urlRouterProvider) {
             }
     
         });
+        
+        $urlRouterProvider.otherwise('/');
 });
 
 // let's define the scotch controller that we call up in the about state
@@ -71,3 +76,5 @@ routerApp.controller('scotchController', function($scope) {
     ];
 
 });
+
+export default routerApp;
