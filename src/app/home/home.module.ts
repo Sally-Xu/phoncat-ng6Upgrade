@@ -1,9 +1,10 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
+import { CommonModule } from '@angular/common';
 import { downgradeComponent } from '@angular/upgrade/static';
 import { HomeComponent } from './home.component';
+import { NgZoneDemoComponent } from './NgZoneDemo.component';
 import { Ng6Component } from './ng6.component';
-import { Ng6DemoComponent } from './ng6-demo.component';
 declare var angular: any;
 
 // angular.module('phonecatApp')
@@ -20,6 +21,15 @@ const routes: Routes = [
     {
       path: 'demo',
       component: Ng6Component
+    },
+    {
+      path: 'zonedemo',
+      component: NgZoneDemoComponent
+    },
+    {
+      path: '',
+      pathMatch: 'full',
+      redirectTo: 'home'
     }
 ];
 
@@ -27,8 +37,10 @@ const routes: Routes = [
     declarations: [
       HomeComponent,
       Ng6Component,
+      NgZoneDemoComponent,
     ],
     imports: [
+      CommonModule,
       RouterModule.forChild(routes)
     ],
     entryComponents: [

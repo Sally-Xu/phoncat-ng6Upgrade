@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { UpgradeModule } from '@angular/upgrade/static';
+
 import '@routerapp/app.module.js';
 
 @Component({
@@ -12,6 +13,6 @@ export class AppComponent implements OnInit {
   constructor(private upgrade: UpgradeModule) { }
 
   ngOnInit() {
-      this.upgrade.bootstrap(document.body, ['routerApp']);
+    this.upgrade.bootstrap(document.body, ['routerApp'], { ngZone: 'noop'});
   }
 }

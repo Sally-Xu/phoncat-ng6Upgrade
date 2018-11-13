@@ -3,6 +3,8 @@ import { NgModule } from '@angular/core';
 import { Routes, RouterModule, UrlHandlingStrategy } from '@angular/router';
 import { UpgradeModule, downgradeComponent } from '@angular/upgrade/static';
 import { AppComponent } from '@app/routerapp/app.component';
+import { EmptyComponent } from '@app/home/empty.component';
+import { CommonModule } from '@angular/common';
 
 // import { phoneServiceProvider } from './_services/phone.service';
 
@@ -18,16 +20,27 @@ export class CustomHandlingStrategy implements UrlHandlingStrategy {
 
 const routes: Routes = [
   {
+    path: '',
+    component: EmptyComponent
+  },
+  {
     path: 'ui',
     loadChildren: './home/home.module#HomeModule'
   },
+  {
+    path: '**',
+    pathMatch: 'full',
+    redirectTo: ''
+  }
 ];
 @NgModule({
   declarations: [
     AppComponent,
+    EmptyComponent
   ],
   imports: [
     BrowserModule,
+    CommonModule,
     UpgradeModule,
     RouterModule.forRoot(routes)
   ],

@@ -10,7 +10,7 @@ routerApp.config(function($stateProvider, $urlRouterProvider, $locationProvider)
     const base = 'routerapp';
     $stateProvider
         .state('ng6', {
-            url: '/ui/{path:.*}',
+            url: '/ui/**',
             // used to clear out ui-view when angular router is activated
             template: ''
         })
