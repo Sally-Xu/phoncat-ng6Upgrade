@@ -9,8 +9,8 @@ routerApp.config(function($stateProvider, $urlRouterProvider, $locationProvider)
     $locationProvider.html5Mode(true);
     const base = 'routerapp';
     $stateProvider
-        .state('ng6', {
-            url: '/ui/**',
+        .state('sink', {
+            url: '/ui/{path:.*}',
             // used to clear out ui-view when angular router is activated
             template: ''
         })

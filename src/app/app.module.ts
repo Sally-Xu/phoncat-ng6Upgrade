@@ -1,11 +1,10 @@
 import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
+import { NgModule, ɵNoopNgZone } from '@angular/core';
 import { Routes, RouterModule, UrlHandlingStrategy } from '@angular/router';
-import { UpgradeModule, downgradeComponent } from '@angular/upgrade/static';
+import { UpgradeModule } from '@angular/upgrade/static';
 import { AppComponent } from '@app/routerapp/app.component';
 import { EmptyComponent } from '@app/home/empty.component';
 import { CommonModule } from '@angular/common';
-
 // import { phoneServiceProvider } from './_services/phone.service';
 
 export class CustomHandlingStrategy implements UrlHandlingStrategy {
@@ -20,11 +19,7 @@ export class CustomHandlingStrategy implements UrlHandlingStrategy {
 
 const routes: Routes = [
   {
-    path: '',
-    component: EmptyComponent
-  },
-  {
-    path: 'ui',
+    path: 'ui/home',
     loadChildren: './home/home.module#HomeModule'
   },
   {
@@ -48,6 +43,7 @@ const routes: Routes = [
   ],
   providers: [
     // phoneServiceProvider,
+    ɵNoopNgZone,
     { provide: UrlHandlingStrategy, useClass: CustomHandlingStrategy }
   ],
   bootstrap: [AppComponent]

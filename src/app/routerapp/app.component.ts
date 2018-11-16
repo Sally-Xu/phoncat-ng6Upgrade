@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ɵNoopNgZone } from '@angular/core';
 import { UpgradeModule } from '@angular/upgrade/static';
 
 import '@routerapp/app.module.js';
@@ -10,9 +10,10 @@ import '@routerapp/app.module.js';
 })
 export class AppComponent implements OnInit {
   title = 'ng6-routerapp';
-  constructor(private upgrade: UpgradeModule) { }
+  constructor(private upgrade: UpgradeModule, private noopZone: ɵNoopNgZone) { }
 
   ngOnInit() {
-    this.upgrade.bootstrap(document.body, ['routerApp'], { ngZone: 'noop'});
+    this.upgrade.ngZone = this.noopZone;
+    this.upgrade.bootstrap(document.body, ['routerApp']);
   }
 }
